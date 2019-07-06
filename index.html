@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+	<head>
+		<title>JProgram - OOP JS</title>
+		<meta charset="utf-8"/>
+	</head>
+
+	<body>
+		<div id="form_register">
+			<h1>Simple Register Form</h1>
+
+			<form method="GET" id="form">
+				<select id="type_person" onchange="createLabel(this.value);">
+					<option value="">P</option>
+					<option value="Cpf:">Physical Person</option>
+					<option value="CNPJ:">Legal_Person</option>
+				</select>
+
+				<label>Nome:</label>
+				<input type="text" name="name" id="name" />
+
+				<label>Email:</label>
+				<input type="email" name="email" id="email" />
+
+				<label>Phone:</label>
+				<input type="text" name="phone" id="phone" />
+
+				<button onclick="register()" id="btn" value="register" type="button">Submit</button>
+			</form>
+		</div>
+		<script type="text/javascript" src="scripts/Main.js"></script>
+		<script type="module" src="scripts/script.js"></script>
+	</body>
+</html>
