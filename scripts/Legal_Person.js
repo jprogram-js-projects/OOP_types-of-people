@@ -10,4 +10,8 @@ export class Legal_Person extends Person{
 	createPerson(){
 		alert("Legal entity created");
 	}
+
+	getId(){
+		return this.cnpj;
+	}
 } 
