@@ -4,32 +4,33 @@
 	<head>
 		<title>JProgram - OOP JS</title>
 		<meta charset="utf-8"/>
+		<script type="module" src="scripts/script.js"></script>
 	</head>
 
 	<body>
-		<div id="form_register">
+		<div id="form_register" style="text-align: center;">
 			<h1>Simple Register Form</h1>
 
-			<form method="GET" id="form">
+			<form method="POST" id="form">
 				<select id="type_person" onchange="createLabel(this.value);">
-					<option value="">P</option>
-					<option value="Cpf:">Physical Person</option>
-					<option value="CNPJ:">Legal_Person</option>
-				</select>
+					<option selected disabled>Select an Option</option>
+					<option value="CPF: ">Physical Person</option>
+					<option value="CNPJ: ">Legal_Person</option>
+				</select> <br/><br/>
 
 				<label>Nome:</label>
-				<input type="text" name="name" id="name" />
+				<input type="text" name="name" id="name" /> <br/><br/>
 
 				<label>Email:</label>
-				<input type="email" name="email" id="email" />
+				<input type="email" name="email" id="email" /> <br/><br/>
 
 				<label>Phone:</label>
-				<input type="text" name="phone" id="phone" />
+				<input type="text" name="phone" id="phone" /> <br/><br/>
 
-				<button onclick="register()" id="btn" value="register" type="button">Submit</button>
+				<button onclick="register();" id="btn" value="register" type="button">Submit</button>
 			</form>
 		</div>
+		
 		<script type="text/javascript" src="scripts/Main.js"></script>
-		<script type="module" src="scripts/script.js"></script>
 	</body>
 </html>
