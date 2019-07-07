@@ -10,4 +10,8 @@ export class Physical_Person extends Person{
 	createPerson(){
 		alert("Individual created");
 	}
+
+	getId(){
+		return this.cpf;
+	}
 }
