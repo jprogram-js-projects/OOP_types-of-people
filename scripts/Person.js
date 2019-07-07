@@ -17,7 +17,7 @@ export class Person{
 
 	getPhone(){
 		return this.phone;
-	}
+	}	
 
 	createPerson(){
 		alert("Person created");
