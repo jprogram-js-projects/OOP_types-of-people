@@ -1,11 +1,13 @@
-var create = false;
-var f = document.getElementById("form");
-var btn = document.getElementById("btn");
-var option = "";
+var form = document.getElementById("form");
+var btn = document.getElementById("btn"); 
 
-function removeCampos(id){
+var option = ""; // variable that helps to delete the label created for the specific type of person.
+
+function removeFields(id){
+	document.getElementById("lineBreak").remove();
 	document.getElementById(option).remove();
 	document.getElementById("newCamp").remove();
+
 	createLabel(id);
 }
 
@@ -18,19 +20,28 @@ function createLabel(nameType){
 
 	option = nameType;
 
-	f.insertBefore(label, btn);
+	form.insertBefore(label, btn);
 
-	//document.form.insertBefore(label, phone);
-	//document.body.appendChild(label);
-	alert(nameType);
 	createInput();
 }
 
 function createInput(){
 	var input = document.createElement("input");
 	input.setAttribute("id", "newCamp");
-	f.insertBefore(input, btn);
+	form.insertBefore(input, btn);
 
-	var a = document.getElementById("type_person");	
-	a.setAttribute("onchange", "removeCampos(this.value)");
+	createLineBreak();
+
+	changeMethod();
+}
+
+function createLineBreak(){
+	var br = document.createElement("br");
+	br.setAttribute("id", "lineBreak");
+	form.insertBefore(br, btn);
+}
+
+function changeMethod(){
+	var swap = document.getElementById("type_person");	
+	swap.setAttribute("onchange", "removeFields(this.value)");
 }
